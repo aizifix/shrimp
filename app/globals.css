@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-varela-round), sans-serif;
+  background-color: #00a5f0;
+  color: #008080;
+  overflow-x: hidden;
+}
+
+/* We keep the class name 'font-marker' to avoid refactoring all files,
+   but map it to the new font 'Luckiest Guy' */
+.font-marker {
+  font-family: var(--font-luckiest-guy), cursive;
+  letter-spacing: 1px;
+}
+
+/* Hide scrollbar for clean look */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #00a5f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #008080;
+  border-radius: 5px;
+}
