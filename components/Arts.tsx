@@ -31,7 +31,7 @@ const ImageRow: React.FC<{ images: string[]; direction: 'left' | 'right'; speed?
 
 const Arts: React.FC = () => {
   return (
-    <section id="arts" className="py-24 bg-white/30 backdrop-blur-sm overflow-hidden scroll-mt-32">
+    <section id="arts" className="relative py-24 bg-white/30 backdrop-blur-sm overflow-hidden scroll-mt-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-12 max-w-7xl">
              <h2 className="text-6xl text-white font-marker text-center flex items-center justify-center">
                {'Community '.split('').map((letter, index) => (
@@ -79,6 +79,13 @@ const Arts: React.FC = () => {
             <ImageRow images={ART_IMAGES_ROW_1} direction="left" speed={30} />
             <ImageRow images={ART_IMAGES_ROW_2} direction="right" speed={35} />
             <ImageRow images={ART_IMAGES_ROW_3} direction="left" speed={25} />
+        </div>
+
+        {/* Wave Border */}
+        <div className="absolute bottom-0 left-0 w-full h-3 overflow-hidden">
+          <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,60 C300,100 600,20 900,60 L1200,60" fill="none" stroke="#00a5f0" strokeWidth="2"/>
+          </svg>
         </div>
     </section>
   );

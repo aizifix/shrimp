@@ -4,9 +4,9 @@ import { SocialLink, TokenomicStat } from './types';
 export const CA_ADDRESS = "We will update this once we are live!";
 
 export const SOCIALS: SocialLink[] = [
-    { platform: "Twitter", url: "https://twitter.com", icon: Twitter },
-    { platform: "Telegram", url: "https://telegram.org", icon: Send },
-    { platform: "Discord", url: "https://discord.com", icon: MessageCircle },
+    { platform: "Twitter", url: "https://x.com/sshrimponsol", icon: Twitter },
+    { platform: "Telegram", url: "https://t.me/shrimpse23", icon: Send },
+    { platform: "Pumpfun", url: "https://pump.fun", icon: MessageCircle },
 ];
 
 export const TOKENOMICS: TokenomicStat[] = [

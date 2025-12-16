@@ -35,6 +35,28 @@ const Hero: React.FC = () => {
     y.set(0);
   };
 
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+
+    // Get the first touch point
+    const touch = e.touches[0];
+    if (!touch) return;
+
+    // Calculate touch position relative to center of element (range -0.5 to 0.5)
+    const touchXPos = (touch.clientX - rect.left) / width - 0.5;
+    const touchYPos = (touch.clientY - rect.top) / height - 0.5;
+
+    x.set(touchXPos);
+    y.set(touchYPos);
+  };
+
+  const handleTouchEnd = () => {
+    x.set(0);
+    y.set(0);
+  };
+
   const handleCopy = () => {
     navigator.clipboard.writeText(CA_ADDRESS);
     setCopied(true);
@@ -43,7 +65,7 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-6 overflow-hidden pt-32 lg:pt-24">
-      <div className="container mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center z-10">
+      <div className="container mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center z-10 px-4 sm:px-6">
 
         {/* Left Content */}
         <motion.div
@@ -56,7 +78,7 @@ const Hero: React.FC = () => {
             Say hello to
           </div>
 
-          <h1 className="text-9xl lg:text-9xl font-marker text-[white] tracking-tighter flex items-center justify-center lg:justify-start">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-marker text-[white] tracking-tighter flex items-center justify-center lg:justify-start">
             {'$SHRIMP'.split('').map((letter, index) => (
               <motion.span
                 key={index}
@@ -121,24 +143,31 @@ const Hero: React.FC = () => {
             }}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="cursor-pointer relative w-full max-w-[500px] sm:max-w-[600px] lg:max-w-[800px] aspect-square"
+            className="cursor-pointer relative w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[800px] aspect-square"
           >
              {/* The Card/Video Container */}
              <div className="absolute inset-0 object-fill transform transition-transform duration-100 ease-out">
                  <video
-                   src="/out.webm"
+                   src="/out.mp4"
                    autoPlay
                    loop
                    muted
                    playsInline
                    crossOrigin="anonymous"
                    className="object-cover w-full h-full pointer-events-none"
-                   style={{ pointerEvents: 'none' }}
+                   style={{
+                     pointerEvents: 'none',
+                     mixBlendMode: 'screen',
+                     WebkitBackdropFilter: 'brightness(0.8) contrast(1.2)',
+                     backdropFilter: 'brightness(0.8) contrast(1.2)'
+                   }}
                  />
-                 <div className="absolute inset-0 pointer-events-none"></div>
+                 <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-transparent via-transparent to-[#00a5f0]/10"></div>
              </div>
 
              {/* Floating Elements for extra depth */}
@@ -159,6 +188,13 @@ const Hero: React.FC = () => {
           </motion.div>
         </div>
 
+      </div>
+
+      {/* Wave Border */}
+      <div className="absolute bottom-0 left-0 w-full h-3 overflow-hidden">
+        <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,60 C300,100 600,20 900,60 L1200,60" fill="none" stroke="#00a5f0" strokeWidth="2"/>
+        </svg>
       </div>
     </section>
   );

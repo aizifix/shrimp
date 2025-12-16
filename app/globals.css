@@ -6,6 +6,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100%;
+  scroll-snap-type: y proximity;
 }
 
 body {
@@ -69,6 +70,136 @@ body {
   /* For IE and Edge */
   html, body {
     -ms-overflow-style: none !important;
+  }
+
+  /* Mobile video transparency fix */
+  video {
+    mix-blend-mode: screen !important;
+    -webkit-backdrop-filter: brightness(0.8) contrast(1.2) !important;
+    backdrop-filter: brightness(0.8) contrast(1.2) !important;
+  }
+
+  /* Mobile text scaling */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2 !important;
+  }
+
+  /* Mobile spacing adjustments */
+  .px-4 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Mobile font size adjustments */
+  .text-6xl {
+    font-size: 3rem !important;
+  }
+
+  .text-7xl {
+    font-size: 3.5rem !important;
+  }
+
+  .text-8xl {
+    font-size: 4rem !important;
+  }
+
+  .text-9xl {
+    font-size: 4.5rem !important;
+  }
+}
+
+/* Tablet-specific fixes */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet video transparency fix */
+  video {
+    mix-blend-mode: screen;
+    -webkit-backdrop-filter: brightness(0.8) contrast(1.2);
+    backdrop-filter: brightness(0.8) contrast(1.2);
+  }
+
+  /* Tablet text scaling */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+  }
+
+  /* Tablet spacing adjustments */
+  .px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  /* Extra small mobile adjustments */
+  .text-6xl {
+    font-size: 2.5rem !important;
+  }
+
+  .text-7xl {
+    font-size: 3rem !important;
+  }
+
+  .text-8xl {
+    font-size: 3.5rem !important;
+  }
+
+  .text-9xl {
+    font-size: 4rem !important;
+  }
+
+  /* Mobile navbar adjustments */
+  .max-w-6xl {
+    max-width: 95% !important;
+  }
+
+  /* Mobile padding adjustments */
+  .py-24 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* Mobile section padding */
+  .py-24 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+/* Utilities component mobile fixes */
+#utilities {
+  height: 200vh;
+}
+
+#utilities .h-screen {
+  height: 100vh;
+}
+
+/* Mobile card layout fixes */
+@media (max-width: 768px) {
+  #utilities {
+    height: 150vh !important;
+  }
+
+  #utilities .max-w-4xl {
+    max-width: 95% !important;
+  }
+
+  #utilities .gap-8 {
+    gap: 1rem !important;
+  }
+
+  #utilities .p-6 {
+    padding: 1rem !important;
+  }
+
+  #utilities .text-3xl {
+    font-size: 1.5rem !important;
+  }
+
+  #utilities .w-16 {
+    width: 3rem !important;
+    height: 3rem !important;
   }
 }
 
