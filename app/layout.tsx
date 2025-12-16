@@ -20,6 +20,9 @@ const varelaRound = Varela_Round({
 export const metadata: Metadata = {
   title: '$SHRIMP - The Meme Coin',
   description: "The official home of $SHRIMP. Say hello to the ocean's tastiest token.",
+  icons: {
+    icon: '/icon.png',
+  },
 };
 
 export default function RootLayout({
