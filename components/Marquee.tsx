@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Marquee: React.FC = () => {
   return (
-    <div className="w-full bg-[white] overflow-hidden py-10 border-y-4 border-[#00608b] transform -rotate-1 shadow-lg z-20 relative">
+    <div className="w-full bg-[white] overflow-hidden py-8 border-y-4 border-[#00608b] transform -rotate-1 shadow-lg z-20 relative">
       <motion.div
         className="flex whitespace-nowrap"
         animate={{ x: [0, -1000] }}
@@ -23,7 +23,7 @@ const Marquee: React.FC = () => {
             <span className="text-[#00608b] font-marker text-3xl lg:text-4xl uppercase tracking-wider">
               DONT BE SHELLFISH
             </span>
-            <span className="text-white text-2xl">★</span>
+            {/* <span className="text-white text-2xl">🦐</span> */}
           </div>
         ))}
       </motion.div>

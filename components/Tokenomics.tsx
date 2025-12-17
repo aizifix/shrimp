@@ -141,7 +141,7 @@ const PieChart: React.FC = () => {
 
 const Tokenomics: React.FC = () => {
   return (
-    <section id="tokenomics" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#006666]/10 scroll-mt-32">
+    <section id="tokenomics" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#006666]/10 scroll-mt-32">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-6xl font-marker text-center mb-16 flex items-center justify-center">
             <span className="text-white text-shadow-teal flex">
@@ -194,6 +194,13 @@ const Tokenomics: React.FC = () => {
             </div>
 
         </div>
+      </div>
+
+      {/* Wave Border */}
+      <div className="absolute bottom-0 left-0 w-full h-3 overflow-hidden">
+        <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,60 C300,100 600,20 900,60 L1200,60" fill="none" stroke="#00a5f0" strokeWidth="2"/>
+        </svg>
       </div>
     </section>
   );

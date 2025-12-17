@@ -7,6 +7,7 @@ import Tokenomics from '@/components/Tokenomics';
 import Games from '@/components/Games';
 import Arts from '@/components/Arts';
 import NFTs from '@/components/NFTs';
+// import Roadmap from '@/components/Roadmap';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Arts />
         <About />
         <Utilities />
+        {/* <Roadmap /> */}
         <Tokenomics />
         <Games />
         <NFTs />

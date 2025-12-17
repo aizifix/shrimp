@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const NFTs: React.FC = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8">
+    <section id="nfts" className="relative py-24 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         <div className="bg-[#008080] rounded-[3rem] p-8 sm:p-12 lg:p-24 text-center border-8 border-[#00a5f0] shadow-2xl relative overflow-hidden">
 
@@ -41,6 +41,13 @@ const NFTs: React.FC = () => {
                 3,333 uniquely generated Shrimp with different hats, accessories, and shell colors. Get your wallets ready.
             </p>
         </div>
+      </div>
+
+      {/* Wave Border */}
+      <div className="absolute bottom-0 left-0 w-full h-3 overflow-hidden">
+        <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,60 C300,100 600,20 900,60 L1200,60" fill="none" stroke="#00a5f0" strokeWidth="2"/>
+        </svg>
       </div>
     </section>
   );

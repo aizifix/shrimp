@@ -5,7 +5,7 @@ import { Gamepad2 } from 'lucide-react';
 
 const Games: React.FC = () => {
   return (
-    <section id="games" className="py-24 px-4 sm:px-6 lg:px-8 scroll-mt-32">
+    <section id="games" className="relative py-24 px-4 sm:px-6 lg:px-8 scroll-mt-32">
       <div className="container mx-auto max-w-7xl text-center">
         <h2 className="text-6xl text-[white] font-marker mb-12 flex items-center justify-center">
           {'Shrimp '.split('').map((letter, index) => (
@@ -79,6 +79,13 @@ const Games: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 bg-[length:100%_4px] pointer-events-none"></div>
             </div>
         </div>
+      </div>
+
+      {/* Wave Border */}
+      <div className="absolute bottom-0 left-0 w-full h-3 overflow-hidden">
+        <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,60 C300,100 600,20 900,60 L1200,60" fill="none" stroke="#00a5f0" strokeWidth="2"/>
+        </svg>
       </div>
     </section>
   );

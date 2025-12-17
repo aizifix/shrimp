@@ -14,7 +14,7 @@ const Utilities: React.FC = () => {
     },
     {
       title: "Staking System",
-      desc: "Stake your $SHRIMP and earn rewards from a 30,000,000 token pool. Get an estimated 0.3% daily PNL returns. Staking fee: $0.88 per action.",
+      desc: "Stake your $SHRIMP and earn rewards from a 30,000,000 token pool. Get daily PNL returns!",
       image: "/4.png"
     },
     {
@@ -46,7 +46,7 @@ const Utilities: React.FC = () => {
         </div>
 
         {/* Desktop Grid - 2x2 Layout */}
-        <div className="hidden lg:grid lg:grid-cols-2 gap-12 xl:gap-16">
+        <div className="hidden lg:grid lg:grid-cols-2 gap-8 xl:gap-12">
           {cards.map((card, i) => (
             <UtilityCard
               key={i}
@@ -58,6 +58,13 @@ const Utilities: React.FC = () => {
           ))}
         </div>
 
+      </div>
+
+      {/* Wave Border */}
+      <div className="absolute bottom-0 left-0 w-full h-3 overflow-hidden">
+        <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,60 C300,100 600,20 900,60 L1200,60" fill="none" stroke="#00a5f0" strokeWidth="2"/>
+        </svg>
       </div>
     </section>
   );
