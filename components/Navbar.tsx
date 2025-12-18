@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
                   {link.label}
                 </a>
                 <span className="absolute -top-4 left-16 transform -translate-x-1/2 bg-[#F4B849] text-white text-xs px-1 m- py-0.5 rounded rotate-6 pointer-events-none">
-                  NEW
+                  BETA TEST!
                 </span>
               </div>
             ) : (
