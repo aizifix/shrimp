@@ -62,14 +62,29 @@ const Navbar: React.FC = () => {
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center gap-8">
           {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={(e) => handleNavClick(e, link.href)}
-              className="font-marker text-lg text-[#00a5f0] hover:text-[#00a5f0] hover:-translate-y-1 transition-all cursor-pointer"
-            >
-              {link.label}
-            </a>
+            link.label === 'Games' ? (
+              <div key={link.label} className="relative">
+                <a
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="font-marker text-lg text-[#00a5f0] hover:text-[#00a5f0] hover:-translate-y-1 transition-all cursor-pointer"
+                >
+                  {link.label}
+                </a>
+                <span className="absolute -top-4 left-16 transform -translate-x-1/2 bg-[#F4B849] text-white text-xs px-1 m- py-0.5 rounded rotate-6 pointer-events-none">
+                  NEW
+                </span>
+              </div>
+            ) : (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="font-marker text-lg text-[#00a5f0] hover:text-[#00a5f0] hover:-translate-y-1 transition-all cursor-pointer"
+              >
+                {link.label}
+              </a>
+            )
           ))}
         </div>
 

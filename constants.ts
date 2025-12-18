@@ -1,4 +1,4 @@
-import { Twitter, Send, Github, MessageCircle } from 'lucide-react';
+import { Twitter, Send, Github, MessageCircle, Gamepad2Icon } from 'lucide-react';
 import { SocialLink, TokenomicStat } from './types';
 
 export const CA_ADDRESS = "We will update this once we are live!";
@@ -7,6 +7,7 @@ export const SOCIALS: SocialLink[] = [
     { platform: "Twitter", url: "https://x.com/sshrimponsol", icon: Twitter },
     { platform: "Telegram", url: "https://t.me/shrimpse23", icon: Send },
     { platform: "Pumpfun", url: "https://pump.fun", icon: MessageCircle },
+    { platform: "Utilities", url: "https://shrimpcoin.base44.app", icon: Gamepad2Icon }
 ];
 
 export const TOKENOMICS: TokenomicStat[] = [

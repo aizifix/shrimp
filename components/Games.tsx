@@ -70,9 +70,9 @@ const Games: React.FC = () => {
                             Top 200 players share the 10,000,000 $SHRIMP Reward Pool!
                         </span>
                     </p>
-                    <button disabled className="bg-[#00a5f0] text-[white] px-8 py-3 rounded-xl font-bold text-xl border-4 border-[#00a5f0] cursor-not-allowed opacity-80">
-                        COMING SOON
-                    </button>
+                    <a href="https://shrimpcoin.base44.app" target="_blank" rel="noopener noreferrer" className="bg-[#00a5f0] text-[white] px-8 py-3 rounded-xl font-bold text-xl border-4 border-[#00a5f0] cursor-pointer inline-block">
+                        Enter Now!
+                    </a>
                 </div>
 
                 {/* Scanlines Effect */}
