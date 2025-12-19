@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
 
         <div className="text-center md:text-left">
             <h3 className="text-5xl font-marker mb-2">$SHRIMP</h3>
-            <p className="opacity-80">© 2024 Shrimp Coin. All rights reserved.</p>
+            <p className="opacity-80">© 2025 Shrimp Coin Launch. All rights reserved.</p>
             <p className="text-xs mt-2 opacity-60 max-w-sm">
                 This token is for entertainment purposes only. There is no expectation of financial return. Don't spend money you can't afford to lose.
             </p>
