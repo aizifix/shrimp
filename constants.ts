@@ -1,12 +1,12 @@
 import { Twitter, Send, Github, MessageCircle, Gamepad2Icon } from 'lucide-react';
 import { SocialLink, TokenomicStat } from './types';
 
-export const CA_ADDRESS = "We will update this once we are live!";
+export const CA_ADDRESS = "93yhyvzLkfbLefqXfaN4ycsj1Ey6uv6TLuPDauKtpump";
 
 export const SOCIALS: SocialLink[] = [
     { platform: "Twitter", url: "https://x.com/sshrimponsol", icon: Twitter },
     { platform: "Telegram", url: "https://t.me/shrimpse23", icon: Send },
-    { platform: "Pumpfun", url: "https://pump.fun", icon: MessageCircle },
+    { platform: "Pumpfun", url: "https://pump.fun/coin/93yhyvzLkfbLefqXfaN4ycsj1Ey6uv6TLuPDauKtpump", icon: MessageCircle },
     { platform: "Utilities", url: "https://shrimpcoin.base44.app", icon: Gamepad2Icon }
 ];
 
